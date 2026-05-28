@@ -46,32 +46,3 @@ CIFAKE(저해상도)에서 GenImage(고해상도) 데이터셋으로의 단계�
 * **Framework:** TensorFlow / Keras (Sequential API)
 * **Environment:** Google Colab
 * **핵심 구조:** CNN (Convolutional Neural Network) 기반 이미지 분류 모델
-
----
-
-## 🤝 4. 팀원 역할 분담
-
-병렬적 연구 구현 및 상호 보완적 협업 체계로 진행되었습니다.
-
-* **김건우 (데이터 및 파이프라인 마스터)**
-  * Kaggle API 환경 세팅 및 데이터셋 다운로드 자동화 스크립트 작성
-  * NumPy/Pandas를 활용한 $[0, 1]$ 정규화 및 데이터 분할(8:1:1) 파이프라인 구축
-  * 단계별 고해상도 학습을 위한 이미지 해상도 변경 조절 함수 구현
-* **고영훈 (모델 설계 및 최적화 엔지니어)**
-  * TensorFlow Keras Sequential API 기반 기초 CNN Baseline 모델 설계
-  * 학습 규칙(Loss, Optimizer) 설정 및 하이퍼파라미터 튜닝
-  * 점진적 해상도 확장 시 학습 균형을 위한 학습률 스케줄러(Learning Rate Scheduler) 구현
-  * 과적합 방지를 위한 Dropout 및 데이터 증강(Data Augmentation) 적용
-
----
-
-## 📅 5. 프로젝트 수행 일정 (10일 초압축 마일스톤)
-
-* **1~3일차: 데이터 고속도로 개통 및 기초 학습 (Phase 1)**
-  * Kaggle 연동 파이프라인 구축 및 저해상도 ($32 \times 32$) Baseline 모델 설계 및 첫 수렴 확인
-* **4~6일차: 해상도 업그레이드 및 심화 학습 (Phase 2)**
-  * 데이터를 단계별로 리사이징하는 전처리 모듈 적용 및 해상도 확장에 따른 모델 미세 조정(Fine-tuning)
-* **7~8일차: 실전 테스트 및 도메인 확장 검증 (Phase 3)**
-  * 미학습(Unseen) 확장 데이터셋을 투입하여 범용 탐지 능력 검증 및 오분류 분석
-* **9~10일차: 최종 성능 비교 및 보고서 작성**
-  * 모델별 성능 지표(학습 곡선, 정확도, Loss) 시각화 및 최종 결론 도출
